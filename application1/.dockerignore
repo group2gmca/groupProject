@@ -1,0 +1,9 @@
+# this is a dockerignore file
+  
+*.md
+*.git
+*.cache
+# all markdown files have been ignored,
+# but make an exception for the README.md:
+!README.md
+~              
