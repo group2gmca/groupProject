@@ -2,24 +2,28 @@ version: '3.3'
 services:
   application1:
     build: ./application1
+    image: gmcagroup2/githubapp:application1
     ports:
       - target: 5000
         published: 5000
         protocol: tcp
   application2:
     build: ./application2
+    image: gmcagroup2/githubapp:application2
     ports:
       - target: 5001
         published: 5001
         protocol: tcp
   application3:
     build: ./application3
+    image: gmcagroup2/githubapp:application3
     ports:
       - target: 5002
         published: 5002
         protocol: tcp
   application4:
     build: ./application4
+    image: gmcagroup2/githubapp:application4
     ports:
       - target: 5003
         published: 5003
