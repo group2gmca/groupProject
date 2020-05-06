@@ -10,7 +10,19 @@ Risk Assessments
 
 Architecture
 
-ERD Diagram
+ERD Diagram & Trello (Kanban Agile Methodologies)
+
+Initial Plan
+
+Implemented Solution
+
+Deployment
+
+Testing
+
+Front-End & Build Design
+
+Improvements
 
 ## Assignment Brief
 
@@ -49,6 +61,9 @@ Architecture V2
 Entity Relationship Diagram
 ![erd2](https://github.com/group2gmca/groupProject/blob/master/documentation/ERD.jpg)
 
+Trello Kanban Agile Methodology
+![Link to Trello Board](https://trello.com/b/3rFrn4n5/sfia2-project)
+
 ## Initial plan:
 
 The initial plan was to create our code in python using visual studio and use git as our version control system to be able to push to git as a team we were going to use the feature branch model to work together seamlessly. 
@@ -78,7 +93,7 @@ For the Testing we conducted tests on the code and database using Pytest. Here a
 ![coverage1](https://github.com/group2gmca/groupProject/blob/master/documentation/cov1.png)
 ![coverage2](https://github.com/group2gmca/groupProjectblob/master/documentation/cov2.png)
 
-### Technologies used:
+### Technologies Used:
 
 - Source code - Visual Studio Application
 - Languages - HTML CSS(BOOTSTRAP) PYTHON
