@@ -47,9 +47,8 @@ class TestBase(TestCase):
 class TestViews(TestBase):
 
     def test_homepage_view(self):
-        """
-        Test that homepage is accessible without login
-        """
         response = self.client.get('/')
         self.assertEqual(response.status_code, 200)
-
+    def test_prizepage_view(self):
+        response = self.client.get('/prize/abc1234')
+        self.assertEqual(response.status_code, 200)
