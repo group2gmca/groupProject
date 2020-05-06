@@ -30,6 +30,9 @@ Diagrams etc
 
 ## Diagrams:
 
+Entity Relationship Diagram
+
+![erd2](https://github.com/group2gmca/groupProject/blob/master/documentation/ERD.jpg)
 ## Initial plan:
 
 WHAT WE THOUGHT WE SHOULD DO
