@@ -12,37 +12,42 @@ services:
     ports:
       - target: 5000
         published: 5000
-        protocol: tcp
-    environment: 
-      DATABASE_URI: ${DATABASE_URI}
-      SECRET_KEY: ${SECRET_KEY}
+        protocol: tcp 
+    env_file:
+    - db.env
+      
   application2:
     build: ./application2
+    image: gmcagroup2/githubapp:application2
     ports:
       - target: 5001
         published: 5001
         protocol: tcp
   application3:
     build: ./application3
+    image: gmcagroup2/githubapp:application3
     ports:
       - target: 5002
         published: 5002
         protocol: tcp
   application4:
     build: ./application4
+    image: gmcagroup2/githubapp:application4
     ports:
       - target: 5003
         published: 5003
         protocol: tcp
-  database:
+  mysql:
     image: mysql:5.7
     volumes:
         - "mydb:/var/lib/mysql"
-    container_name: mysql
     ports: 
-    - "3306:3306"
+    - target: 3306
+      published: 3306 
     environment: 
       MYSQL_ROOT_PASSWORD: "root"
       MYSQL_DATABASE: prize
+      #env_file:
+      #- db.env 
 volumes: 
   mydb:
