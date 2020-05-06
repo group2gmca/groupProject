@@ -13,31 +13,36 @@ services:
       - target: 5000
         published: 5000
         protocol: tcp
+    environment: 
+      DATABASE_URI: ${DATABASE_URI}
+      SECRET_KEY: ${SECRET_KEY}
   application2:
     build: ./application2
-    image: gmcagroup2/githubapp:application2
-    deploy:
-      replicas: 2
-  
     ports:
       - target: 5001
         published: 5001
         protocol: tcp
   application3:
     build: ./application3
-    image: gmcagroup2/githubapp:application3
-    deploy:
-      replicas: 2
     ports:
       - target: 5002
         published: 5002
         protocol: tcp
   application4:
     build: ./application4
-    image: gmcagroup2/githubapp:application4
-    deploy:
-      replicas: 2
     ports:
       - target: 5003
         published: 5003
         protocol: tcp
+  database:
+    image: mysql:5.7
+    volumes:
+        - "mydb:/var/lib/mysql"
+    container_name: mysql
+    ports: 
+    - "3306:3306"
+    environment: 
+      MYSQL_ROOT_PASSWORD: "root"
+      MYSQL_DATABASE: prize
+volumes: 
+  mydb:
