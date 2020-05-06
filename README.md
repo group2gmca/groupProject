@@ -28,6 +28,9 @@ The output from service 2 and 3 will be concatenated to form one username/ accou
 Initial Risk Assessment
 ![Risk](https://github.com/group2gmca/groupProject/blob/master/documentation/risk1.png)
 
+Risk Asessment 2
+![Risk](https://github.com/group2gmca/groupProject/blob/master/documentation/risk2.png)
+
 ## Architecture
 ![Arch](https://github.com/group2gmca/groupProject/blob/master/documentation/arch.png)
 
