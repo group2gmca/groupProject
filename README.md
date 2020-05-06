@@ -35,6 +35,17 @@ Entity Relationship Diagram
 ![erd2](https://github.com/group2gmca/groupProject/blob/master/documentation/ERD.jpg)
 ## Initial plan:
 
+The initial plan was to create our code in python using visual studio and use git as our version control system to be able to push to git as a team we were going to use the feature branch model to work together seamlessly. 
+We planned on using Jenkins as our CI server which would autonomously push any changes made in our code linked to git using webhooks 
+We also planned on using docker containers to run each of our micro services and link them together using docker swarm. 
+ADD MORE ABOUT DOCKER TECH WE HAVE USED
+for testing we planned on using pytest to test the code 
+ADD MORE ON TESTING
+testing environments?
+for the database section of the project we are going to use mysql/pymysql as it is commonly used and understood, other options available to us are to use CosmosDB.
+for hosting our application we have two options Azure or GCP
+also to spin up our application we have the ability to use Terraform and Kubernetes
+
 WHAT WE THOUGHT WE SHOULD DO
 
 ## Solution:
