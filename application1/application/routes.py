@@ -31,8 +31,8 @@ def home():
 ### second iteration
 def prize(prizeusername):
     prize = requests.post('http://application4:5003/prizelong', data=prizeusername)
-     user_data = Prize(username=prizeusername, prize=prize.text)
-     db.session.add(user_data)
-     db.session.commit()
+    user_data = Prize(username=prizeusername, prize=prize.text)
+    db.session.add(user_data)
+    db.session.commit()
     
     return render_template('prize.html', title='prize', prizeusername=prizeusername, prize=prize.text)
