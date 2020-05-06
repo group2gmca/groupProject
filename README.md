@@ -84,6 +84,18 @@ ADD MORE TECHNOLOGIES HERE
 
 ## Front end design:
 
+Main Page of our Interface
+
+![home](https://github.com/group2gmca/groupProject/blob/master/documentation/home.jpg)
+
+Prize Page showing No Prize Won 
+
+![nowin](https://github.com/group2gmca/groupProject/blob/master/documentation/nowin.jpg)
+
+Prize Page Showing Small Prize Won
+
+![smallprize](https://github.com/group2gmca/groupProject/blob/master/documentation/smallprize.jpg)
+
 SHOW A FEW SHOTS OF OUR APP WORKING HOME PAGE PRIZE PAGE
 
 Build shell Jenkins
