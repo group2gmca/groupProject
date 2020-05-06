@@ -62,7 +62,7 @@ Entity Relationship Diagram
 ![erd2](https://github.com/group2gmca/groupProject/blob/master/documentation/ERD.jpg)
 
 Trello Kanban Agile Methodology
-[Link to Trello](https://www.google.com "Trello-Board")
+[Link to Trello](https://trello.com/b/3rFrn4n5/sfia2-project "Trello-Board")
 
 ## Initial plan:
 
