@@ -2,6 +2,13 @@ version: '3.3'
 services:
   application1:
     build: ./application1
+    image: gmcagroup2/githubapp:application1
+    deploy:
+      replicas: 2
+      update_config:
+        delay: 10s
+        parallelism: 1
+        failure_action: rollback
     ports:
       - target: 5000
         published: 5000
