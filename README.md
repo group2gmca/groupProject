@@ -65,6 +65,8 @@ Testing – Pytest
 
 CI server – Jenkins
 
+Docker / Docker Swarm 
+
 VM SQL – GCP
 
 ADD MORE TECHNOLOGIES HERE
