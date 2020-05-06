@@ -2,9 +2,15 @@
 
 ## Group Project Due 7th May 2020 at QA Academy Devops.
 
-Index
+## Index
 
-Links to different sections here.
+Assignment Brief and Initial Solution
+
+Risk Assessments
+
+Architecture
+
+ERD Diagram
 
 ## Assignment Brief
 
@@ -32,6 +38,7 @@ Risk Asessment 2
 ![Risk](https://github.com/group2gmca/groupProject/blob/master/documentation/risk2.png)
 
 ## Architecture
+Initial Architecture Plan 
 ![Arch](https://github.com/group2gmca/groupProject/blob/master/documentation/arch.png)
 
 Architecture V2
@@ -40,30 +47,23 @@ Architecture V2
 ## Diagrams:
 
 Entity Relationship Diagram
-
 ![erd2](https://github.com/group2gmca/groupProject/blob/master/documentation/ERD.jpg)
+
 ## Initial plan:
 
 The initial plan was to create our code in python using visual studio and use git as our version control system to be able to push to git as a team we were going to use the feature branch model to work together seamlessly. 
 We planned on using Jenkins as our CI server which would autonomously push any changes made in our code linked to git using webhooks 
-We also planned on using docker containers to run each of our micro services and link them together using docker swarm. 
-ADD MORE ABOUT DOCKER TECH WE HAVE USED
-for testing we planned on using pytest to test the code 
-ADD MORE ON TESTING
-testing environments?
-for the database section of the project we are going to use mysql/pymysql as it is commonly used and understood, other options available to us are to use CosmosDB.
-for hosting our application we have two options Azure or GCP
-also to spin up our application we have the ability to use Terraform and Kubernetes
+We also planned on using docker containers to run each of our micro services and link them together using docker swarm on master and worker nodes. 
+for testing we planned on using pytest to test the code and database. For the database section of the project we are going to use mysql/pymysql as it is commonly used and understood, other options available to us are to use CosmosDB.
+for hosting our application we have two options Azure or GCP, also to spin up our application we have the ability to use Terraform and Kubernetes
 
-WHAT WE THOUGHT WE SHOULD DO
 
 ## Solution:
-
-WHAT WE DID RELATED TO ARCHITECTURE
+Following a revised look at the architecture (architecture V2 image) to create an app that satisfied the MVP first, we created a swarm of 1 manager and 2 worker VM's. The master created our 4 service application using a docker-compose file situated at the route. We then implemented crontab, which ran a script every 3 minutes checking if there had been new builds of our images in the docker registry. Our images would only be rebuilt if the source code on the master branch had been changed with a pull request. We used docker hub's functionality to create builds and configured this in our organisations build settings.
+Using all these together meant that each time there was a merge to the master branch, docker hub automated a build, our master vm searched for new images, updated images, replicated it across workers and because we had a load balancer- we had 0 downtime.
 
 ### Deployment
 
-How we are going to deploy the app azure gcp docker swarm etc etc
 DockerHub
 ![docker](https://github.com/group2gmca/groupProject/blob/master/documentation/docker%20hub.png)
 
@@ -79,27 +79,19 @@ For the Testing we conducted tests on the code and database using Pytest. Here a
 
 ### Technologies used:
 
-Visual studio code – Source code
+Source code - Visual Studio Application
+Languages - HTML CSS(BOOTSTRAP) PYTHON
+Version Control - GIT
+Project Tracking - Trello(Kanban System)
+CI Server - Docker/Cron
+Build Tool - Docker/Stack
+VM - GCP
+Database - Mysql container in Docker
 
-Version control system – Git
-
-Project tracking – Trello
-
-Testing – Pytest
-
-CI server – Docker/CRON
-
-Docker / Docker Swarm 
-
-VM SQL – GCP
-
-Database - Mysql
-
-Source code - Python/html/css/Bootstrap
-
-ADD MORE TECHNOLOGIES HERE
 
 ## Front end design:
+
+Below are some screenshots of our Interface:
 
 Main Page of our Interface
 
@@ -113,9 +105,7 @@ Prize Page Showing Small Prize Won
 
 ![smallprize](https://github.com/group2gmca/groupProject/blob/master/documentation/smallprize.jpg)
 
-SHOW A FEW SHOTS OF OUR APP WORKING HOME PAGE PRIZE PAGE
-
-Build shell Jenkins
+Screenshots of some of our builds in Docker-Stack-Crontab
 
 ## Improvements:
 
