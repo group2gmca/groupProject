@@ -129,10 +129,10 @@ Screenshots of some of our builds in Docker-Stack-Crontab
 Improvements for the future (future sprints)
 
 Although the application meets the MVP, In order to maximise the potential of our project there are a number of improvements/changes that can be made. Some of these changes are:
--- Use Jenkins as our CI server connected to a webhook as it is widely used and there is a lot of scope with CI Pipelines.
--- Use Kubernetes/Kubernetes Clusters -  As it is a great orchestration tool, also there is a buzz surrounding Kubernetes at the moment and with its increased functionality the app would run effienctly and appeal to clients
--- Azure - Use Azure to host our application and use the built in functionality that Azure offers as it differs to GCP.  
--- Spin up our application using Terraform to increase efficiency
+- Use Jenkins as our CI server connected to a webhook as it is widely used and there is a lot of scope with CI Pipelines.
+- Use Kubernetes/Kubernetes Clusters -  As it is a great orchestration tool, also there is a buzz surrounding Kubernetes at the moment and with its increased functionality the app would run effienctly and appeal to clients
+- Azure - Use Azure to host our application and use the built in functionality that Azure offers as it differs to GCP.  
+- Spin up our application using Terraform to increase efficiency
 
 ## Authors:
 Julie Pole - Fabia Fowler - Zahid Ali
