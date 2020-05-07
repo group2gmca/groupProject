@@ -122,7 +122,27 @@ Prize Page Showing Small Prize Won
 
 ![smallprize](https://github.com/group2gmca/groupProject/blob/master/documentation/smallprize.jpg)
 
+## Builds in Docker-Stack-Crontab
 Screenshots of some of our builds in Docker-Stack-Crontab
+
+![jp1](https://github.com/group2gmca/groupProject/blob/master/documentation/jp1.png)
+Master VM with the docker stack deploy
+
+![jp2](https://github.com/group2gmca/groupProject/blob/master/documentation/jp2.png)
+Master showing the stack
+
+![jp3](https://github.com/group2gmca/groupProject/blob/master/documentation/jp3.png)
+
+![jp4](https://github.com/group2gmca/groupProject/blob/master/documentation/jp4.png)
+Worker 2 VM with MY SQL on
+
+![jp5](https://github.com/group2gmca/groupProject/blob/master/documentation/jp5.png)
+Crontab using a 3 minute cycle to run .sh script to ensure stack is pulling latest images from Docker hub (organisational account – which in turn is puling source from git hub)
+
+![jp6](https://github.com/group2gmca/groupProject/blob/master/documentation/jp6.png)
+Sh file with script to run on times dictated by Crontab – added log files to monitor any issues
+
+
 
 ## Improvements:
 
