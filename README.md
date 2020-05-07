@@ -92,7 +92,7 @@ This is our CI Pipeline
 
 For the Testing we conducted tests on the code and database using Pytest. Here are some of our Coverage Reports
 ![coverage1](https://github.com/group2gmca/groupProject/blob/master/documentation/cov1.png)
-![coverage2](https://github.com/group2gmca/groupProjectblob/master/documentation/cov2.png)
+![coverage2](https://github.com/group2gmca/groupProject/blob/master/documentation/cov2.png)
 
 ### Technologies Used:
 
