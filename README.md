@@ -1,10 +1,28 @@
-# Prize Generator application
+# Prize Generator Application
 
 ## Group Project Due 7th May 2020 at QA Academy Devops.
 
-Index
+## Index
 
-Links to different sections here.
+Assignment Brief and Initial Solution
+
+Risk Assessments
+
+Architecture
+
+ERD Diagram & Trello (Kanban Agile Methodologies)
+
+Initial Plan
+
+Implemented Solution
+
+Deployment
+
+Testing
+
+Front-End & Build Design
+
+Improvements
 
 ## Assignment Brief
 
@@ -32,6 +50,7 @@ Risk Asessment 2
 ![Risk](https://github.com/group2gmca/groupProject/blob/master/documentation/risk2.png)
 
 ## Architecture
+Initial Architecture Plan 
 ![Arch](https://github.com/group2gmca/groupProject/blob/master/documentation/arch.png)
 
 Architecture V2
@@ -40,30 +59,28 @@ Architecture V2
 ## Diagrams:
 
 Entity Relationship Diagram
-
 ![erd2](https://github.com/group2gmca/groupProject/blob/master/documentation/ERD.jpg)
+
+Trello Kanban Agile Methodology
+![erd2](https://github.com/group2gmca/groupProject/blob/master/documentation/trello.png)
+[Link to Trello](https://trello.com/b/3rFrn4n5/sfia2-project "Trello-Board")
+
 ## Initial plan:
 
 The initial plan was to create our code in python using visual studio and use git as our version control system to be able to push to git as a team we were going to use the feature branch model to work together seamlessly. 
 We planned on using Jenkins as our CI server which would autonomously push any changes made in our code linked to git using webhooks 
-We also planned on using docker containers to run each of our micro services and link them together using docker swarm. 
-ADD MORE ABOUT DOCKER TECH WE HAVE USED
-for testing we planned on using pytest to test the code 
-ADD MORE ON TESTING
-testing environments?
-for the database section of the project we are going to use mysql/pymysql as it is commonly used and understood, other options available to us are to use CosmosDB.
-for hosting our application we have two options Azure or GCP
-also to spin up our application we have the ability to use Terraform and Kubernetes
+We also planned on using docker containers to run each of our micro services and link them together using docker swarm on master and worker nodes.  
+For testing we planned on using pytest to test the code and database. For the database section of the project we are going to use mysql/pymysql as it is commonly used and understood, other options available to us are to use CosmosDB.  
+For hosting our application we have two options Azure or GCP, also to spin up our application we have the ability to use Terraform and Kubernetes
 
-WHAT WE THOUGHT WE SHOULD DO
 
 ## Solution:
 
-WHAT WE DID RELATED TO ARCHITECTURE
+Following a revised look at the architecture (architecture V2 image) to create an app that satisfied the MVP first, we created a swarm of 1 manager and 2 worker VM's. The master created our 4 service application using a docker-compose file situated at the route. We then implemented crontab, which ran a script every 3 minutes checking if there had been new builds of our images in the docker registry. Our images would only be rebuilt if the source code on the master branch had been changed with a pull request. We used docker hub's functionality to create builds and configured this in our organisations build settings.
+Using all these together meant that each time there was a merge to the master branch, docker hub automated a build, our master vm searched for new images, updated images, replicated it across workers and because we had a load balancer- we had 0 downtime.
 
 ### Deployment
 
-How we are going to deploy the app azure gcp docker swarm etc etc
 DockerHub
 ![docker](https://github.com/group2gmca/groupProject/blob/master/documentation/docker%20hub.png)
 
@@ -75,31 +92,23 @@ This is our CI Pipeline
 
 For the Testing we conducted tests on the code and database using Pytest. Here are some of our Coverage Reports
 ![coverage1](https://github.com/group2gmca/groupProject/blob/master/documentation/cov1.png)
-![coverage2](https://github.com/group2gmca/groupProjectblob/master/documentation/cov2.png)
+![coverage2](https://github.com/group2gmca/groupProject/blob/master/documentation/cov2.png)
 
-### Technologies used:
+### Technologies Used:
 
-Visual studio code – Source code
+- Source code - Visual Studio Application
+- Languages - HTML CSS(BOOTSTRAP) PYTHON
+- Version Control - GIT
+- Project Tracking - Trello(Kanban System)
+- CI Server - Docker/Cron
+- Build Tool - Docker/Stack
+- VM - GCP
+- Database - Mysql container in Docker
 
-Version control system – Git
-
-Project tracking – Trello
-
-Testing – Pytest
-
-CI server – Docker/CRON
-
-Docker / Docker Swarm 
-
-VM SQL – GCP
-
-Database - Mysql
-
-Source code - Python/html/css/Bootstrap
-
-ADD MORE TECHNOLOGIES HERE
 
 ## Front end design:
+
+Below are some screenshots of our Interface:
 
 Main Page of our Interface
 
@@ -113,10 +122,38 @@ Prize Page Showing Small Prize Won
 
 ![smallprize](https://github.com/group2gmca/groupProject/blob/master/documentation/smallprize.jpg)
 
-SHOW A FEW SHOTS OF OUR APP WORKING HOME PAGE PRIZE PAGE
+## Builds in Docker-Stack-Crontab
+Screenshots of some of our builds in Docker-Stack-Crontab
 
-Build shell Jenkins
+![jp1](https://github.com/group2gmca/groupProject/blob/master/documentation/jp1.png)
+Master VM with the docker stack deploy
+
+![jp2](https://github.com/group2gmca/groupProject/blob/master/documentation/jp2.png)
+Master showing the stack
+
+![jp3](https://github.com/group2gmca/groupProject/blob/master/documentation/jp3.png)
+
+![jp4](https://github.com/group2gmca/groupProject/blob/master/documentation/jp4.png)
+Worker 2 VM with MY SQL on
+
+![jp5](https://github.com/group2gmca/groupProject/blob/master/documentation/jp5.png)
+Crontab using a 3 minute cycle to run .sh script to ensure stack is pulling latest images from Docker hub (organisational account – which in turn is puling source from git hub)
+
+![jp6](https://github.com/group2gmca/groupProject/blob/master/documentation/jp6.png)
+Sh file with script to run on times dictated by Crontab – added log files to monitor any issues
+
+
 
 ## Improvements:
 
-IMPROVEMENTS OR THINGS WE COULD OF DONE BETTER
+Improvements for the future (future sprints)
+
+Although the application meets the MVP, In order to maximise the potential of our project there are a number of improvements/changes that can be made. Some of these changes are:
+- Use Jenkins as our CI server connected to a webhook as it is widely used and there is a lot of scope with CI Pipelines.
+- Use Kubernetes/Kubernetes Clusters -  As it is a great orchestration tool, also there is a buzz surrounding Kubernetes at the moment and with its increased functionality the app would run efficiently and appeal to clients
+- Azure - Use Azure to host our application and use the built in functionality that Azure offers as it differs to GCP.  
+- Spin up our application using Terraform to increase efficiency
+- Conduct futher Risk Assessments, User Stories and Testing
+
+## Authors:
+Julie Pole - Fabia Fowler - Zahid Ali
