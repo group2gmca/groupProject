@@ -62,7 +62,7 @@ Entity Relationship Diagram
 ![erd2](https://github.com/group2gmca/groupProject/blob/master/documentation/ERD.jpg)
 
 Trello Kanban Agile Methodology
-![erd2](https://github.com/group2gmca/groupProject/blob/master/documentation/trello.jpg)
+![erd2](https://github.com/group2gmca/groupProject/blob/master/documentation/trello.png)
 [Link to Trello](https://trello.com/b/3rFrn4n5/sfia2-project "Trello-Board")
 
 ## Initial plan:
@@ -92,7 +92,7 @@ This is our CI Pipeline
 
 For the Testing we conducted tests on the code and database using Pytest. Here are some of our Coverage Reports
 ![coverage1](https://github.com/group2gmca/groupProject/blob/master/documentation/cov1.png)
-![coverage2](https://github.com/group2gmca/groupProjectblob/master/documentation/cov2.png)
+![coverage2](https://github.com/group2gmca/groupProject/blob/master/documentation/cov2.png)
 
 ### Technologies Used:
 
