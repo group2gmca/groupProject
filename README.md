@@ -1,4 +1,4 @@
-# Prize Generator application
+# Prize Generator Application
 
 ## Group Project Due 7th May 2020 at QA Academy Devops.
 
@@ -133,6 +133,7 @@ Although the application meets the MVP, In order to maximise the potential of ou
 - Use Kubernetes/Kubernetes Clusters -  As it is a great orchestration tool, also there is a buzz surrounding Kubernetes at the moment and with its increased functionality the app would run efficiently and appeal to clients
 - Azure - Use Azure to host our application and use the built in functionality that Azure offers as it differs to GCP.  
 - Spin up our application using Terraform to increase efficiency
+- Conduct futher Risk Assessments, User Stories and Testing
 
 ## Authors:
 Julie Pole - Fabia Fowler - Zahid Ali
